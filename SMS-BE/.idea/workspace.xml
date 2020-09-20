@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edbb39ae-69ea-408f-8a3a-69bea906dc72" name="Default Changelist" comment="" />
+    <list default="true" id="b46841fd-7d70-4f33-9d10-6bb9dd40bc65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../SMS-BE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-BE/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SMS-FE/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SMS-FE/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SMS-FE/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../SMS-FE/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../SMS-FE/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMS-FE/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../SMS-FE/src/styles.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sms@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sms@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="D:\KLTN\SMS-BE\.idea" />
-      </set>
-    </option>
+  <component name="ProjectId" id="1hP5ztnVcrN0NByHXZfcpUbYDUG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectId" id="1hP5C0y161MckuKeMAM7kg2cFwQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/IJ Workspace/on-boarding-exercise" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -36,17 +78,27 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="SmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SMS-BE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kltn.sms.SmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="edbb39ae-69ea-408f-8a3a-69bea906dc72" name="Default Changelist" comment="" />
-      <created>1599899755692</created>
+      <changelist id="b46841fd-7d70-4f33-9d10-6bb9dd40bc65" name="Default Changelist" comment="" />
+      <created>1599900152170</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1599899755692</updated>
-      <workItem from="1599899760170" duration="393000" />
+      <updated>1599900152170</updated>
+      <workItem from="1599900154566" duration="292000" />
+      <workItem from="1600570892475" duration="5264000" />
     </task>
     <servers />
   </component>
@@ -58,7 +110,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
