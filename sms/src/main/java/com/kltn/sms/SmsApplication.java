@@ -1,5 +1,6 @@
 package com.kltn.sms;
 
+import com.kltn.sms.model.Customer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
