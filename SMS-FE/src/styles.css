@@ -22,3 +22,8 @@ html, body {
     width: 100%;
     background-color: #f1f3f4;
 }
+
+a {
+    cursor: pointer;
+    color: #17a2b8 !important;
+}
