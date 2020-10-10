@@ -1,6 +1,7 @@
 package com.kltn.sms.controller;
 
-import com.kltn.sms.dto.LoginRequest;
+import com.kltn.sms.dto.request.LoginRequest;
+import com.kltn.sms.dto.response.LoginResponse;
 import com.kltn.sms.security.CustomUserDetails;
 import com.kltn.sms.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class HomeController {
     private JwtTokenProvider tokenProvider;
 
     @PostMapping("/login")
-    public ResponseEntity<String> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<LoginResponse> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
         // Xác thực từ username và password.
         Authentication authentication = authenticationManager.authenticate(
@@ -39,7 +40,7 @@ public class HomeController {
 
         // Trả về jwt cho người dùng.
         String jwt = tokenProvider.generateToken((CustomUserDetails) authentication.getPrincipal());
-        return ResponseEntity.ok(jwt);
+        return ResponseEntity.ok(new LoginResponse(jwt));
     }
 
     // Api /api/random yêu cầu phải xác thực mới có thể request

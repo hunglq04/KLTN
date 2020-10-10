@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_RATING", allocationSize = 1, initialValue=100)
 public class Rating extends BaseEntity {
     @Column
     private String image1;
@@ -27,6 +28,9 @@ public class Rating extends BaseEntity {
 
     @Column
     private LocalDate date;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Employee createdBy;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(

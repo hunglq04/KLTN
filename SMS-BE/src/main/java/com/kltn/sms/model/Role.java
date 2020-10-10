@@ -11,18 +11,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Role extends BaseEntity{
+@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_ROLE", allocationSize = 1, initialValue = 100)
+public class Role extends BaseEntity {
     @Column
     private String name;
 
     @Column
     private String description;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "Role_Right",
-            joinColumns = { @JoinColumn(name = "role_id") },
-            inverseJoinColumns = { @JoinColumn(name = "right_id") }
-    )
-    private List<Right> rights;
+    @Override
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROLE_SEQ")
+    public Long getId() {
+        return super.getId();
+    }
 }

@@ -1,4 +1,4 @@
-package com.kltn.sms.dto;
+package com.kltn.sms.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
