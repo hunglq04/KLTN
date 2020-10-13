@@ -27,3 +27,19 @@ a {
     cursor: pointer;
     color: #17a2b8 !important;
 }
+
+.btn-dark {
+	padding: 0 25px !important;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	height: 38px;
+	-webkit-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	cursor: pointer;
+	border: 2px solid #333333;
+	background-color: #333333;
+}

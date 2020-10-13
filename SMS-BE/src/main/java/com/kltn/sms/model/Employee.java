@@ -3,15 +3,14 @@ package com.kltn.sms.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_EMPLOYEE", allocationSize = 1, initialValue=100)
 public class Employee extends BaseEntity{
     @Column
     private String name;
@@ -26,9 +25,6 @@ public class Employee extends BaseEntity{
     private String idCard;
 
     @Column
-    private String password;
-
-    @Column
     private Long salary;
 
     @Column
@@ -37,11 +33,6 @@ public class Employee extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     private Salon salon;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "Employee_Role",
-            joinColumns = { @JoinColumn(name = "employee_id") },
-            inverseJoinColumns = { @JoinColumn(name = "role_id") }
-    )
-    private List<Role> roles;
+    @OneToOne(fetch = FetchType.EAGER)
+    private Account account;
 }
