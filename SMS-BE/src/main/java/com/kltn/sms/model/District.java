@@ -10,7 +10,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_DISTRICT", allocationSize = 1, initialValue=100)
 public class District extends BaseEntity {
     @Column
     private String name;

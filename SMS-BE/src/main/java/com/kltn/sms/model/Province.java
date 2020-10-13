@@ -6,13 +6,12 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.OneToMany;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_PROVINCE", allocationSize = 1, initialValue=100)
 public class Province extends BaseEntity {
     @Column
     private String name;

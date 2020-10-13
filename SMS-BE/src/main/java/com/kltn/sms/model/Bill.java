@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_BILL", allocationSize = 1, initialValue=100)
 public class Bill extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private Customer customer;

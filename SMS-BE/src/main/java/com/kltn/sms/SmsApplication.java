@@ -1,18 +1,23 @@
 package com.kltn.sms;
 
-import org.flywaydb.core.Flyway;
+import com.kltn.sms.model.Employee;
+import com.kltn.sms.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import javax.sql.DataSource;
+import java.util.List;
 
 @SpringBootApplication
 public class SmsApplication implements CommandLineRunner {
 
     @Autowired
-    private DataSource dataSource;
+    private EmployeeRepository employeeRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public static void main(String[] args) {
         SpringApplication.run(SmsApplication.class, args);
@@ -20,6 +25,12 @@ public class SmsApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Flyway.configure().baselineOnMigrate(true).dataSource(dataSource).load().migrate();
+        List<Employee> employees = employeeRepository.findAll();
+        if (employees.isEmpty()) {
+            Employee admin = new Employee();
+            admin.setIdCard("admin");
+            admin.setPassword(passwordEncoder.encode("admin"));
+            employeeRepository.save(admin);
+        }
     }
 }

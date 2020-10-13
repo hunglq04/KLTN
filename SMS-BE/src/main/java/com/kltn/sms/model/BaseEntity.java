@@ -3,23 +3,17 @@ package com.kltn.sms.model;
 import lombok.Data;
 import lombok.Getter;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Version;
 import java.io.Serializable;
 
 @MappedSuperclass
 @Data
 class BaseEntity implements Serializable {
-
-    @Transient
-    private final Long TRANSIENT_ID = -1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ID")
+    @Id@GeneratedValue
     private Long id;
     @Version
     private Long version;
-
-    @Transient
-    public boolean isPersisted() {
-        return this.id != null && this.id > TRANSIENT_ID;
-    }
 }

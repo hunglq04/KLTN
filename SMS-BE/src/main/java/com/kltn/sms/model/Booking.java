@@ -14,7 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@SequenceGenerator(name = "SEQ_ID", sequenceName = "SEQ_BOOKING", allocationSize = 1, initialValue=100)
 public class Booking extends BaseEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     private Customer customer;

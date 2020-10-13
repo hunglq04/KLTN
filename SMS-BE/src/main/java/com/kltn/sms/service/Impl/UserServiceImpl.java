@@ -1,8 +1,7 @@
 package com.kltn.sms.service.Impl;
 
-import com.kltn.sms.model.Account;
 import com.kltn.sms.model.Employee;
-import com.kltn.sms.repository.AccountRepository;
+import com.kltn.sms.repository.EmployeeRepository;
 import com.kltn.sms.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,21 +15,21 @@ import java.util.Optional;
 public class UserServiceImpl implements UserDetailsService {
 
     @Autowired
-    private AccountRepository accountRepository;
+    private EmployeeRepository employeeRepository;
 
     @Override
     public UserDetails loadUserByUsername(String idCard) {
-        Optional<Account> account = accountRepository.findByUsername(idCard);
-        if(account.isPresent()) {
-            return new CustomUserDetails(account.get());
+        Optional<Employee> employee = employeeRepository.findByIdCard(idCard);
+        if(employee.isPresent()) {
+            return new CustomUserDetails(employee.get());
         }
         throw new UsernameNotFoundException(idCard);
     }
 
     public UserDetails loadUserById(Long id) {
-        Optional<Account> account = accountRepository.findById(id);
-        if(account.isPresent()) {
-            return new CustomUserDetails(account.get());
+        Optional<Employee> employee = employeeRepository.findById(id);
+        if(employee.isPresent()) {
+            return new CustomUserDetails(employee.get());
         }
         throw new UsernameNotFoundException("Not found user with ID=" + id);
     }

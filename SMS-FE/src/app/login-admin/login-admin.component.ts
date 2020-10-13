@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
   selector: 'app-login-admin',
@@ -9,27 +7,7 @@ import { AuthenticationService } from '../service/authentication.service';
 })
 export class LoginAdminComponent implements OnInit {
 
-  loginForm: FormGroup;
-
-  constructor   (
-    private loginService: AuthenticationService,
-    private fb: FormBuilder
-  ){}
-
   ngOnInit() {
-    this.loginForm = this.fb.group({
-      idCard: '',
-      password: ''
-    });
-  }
-
-  onLogin() {
-    console.log("Submit Login");
-    
-    this.loginService.authenticate("admin", "admin")
-      .then(res => {
-          console.log(res);
-        })
   }
 
 }

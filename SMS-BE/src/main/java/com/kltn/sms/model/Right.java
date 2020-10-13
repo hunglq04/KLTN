@@ -6,24 +6,22 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import java.util.List;
 
 @Entity
+@Table(name = "\"right\"")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Ward extends BaseEntity {
+public class Right extends BaseEntity {
     @Column
     private String name;
 
     @Column
-    private String prefix;
+    private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private District district;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Province province;
-
+    @ManyToMany(mappedBy = "rights")
+    private List<Role> roles;
 }

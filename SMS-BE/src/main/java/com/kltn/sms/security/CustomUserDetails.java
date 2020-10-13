@@ -1,7 +1,7 @@
 package com.kltn.sms.security;
 
 import com.kltn.sms.constant.CommonConstants;
-import com.kltn.sms.model.Account;
+import com.kltn.sms.model.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,22 +17,21 @@ import java.util.Collections;
 @NoArgsConstructor
 public class CustomUserDetails implements UserDetails {
 
-    Account account;
+    Employee user;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        //TODO get ROle
         return Collections.singleton(new SimpleGrantedAuthority(CommonConstants.ROLE_USER));
     }
 
     @Override
     public String getPassword() {
-        return account.getPassword();
+        return user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return account.getUsername();
+        return user.getIdCard();
     }
 
     @Override
